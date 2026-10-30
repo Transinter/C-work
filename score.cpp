@@ -1,37 +1,24 @@
-#include <iostream>
+#include<iostream>
 using namespace std;
-
-int main()
-{
-    double profit,bonus=0;
-    cout<<"请输入当月利润（元）:";
-    cin>>profit;
-
-    if(profit<=100000)
+int main() {
+    int score;
+    cout<<"请给电影打分";
+    cin>>score;
+    if(score==9||score==10)
     {
-        bonus=profit*0.1;
+        cout<<"你认为电影经典"<<endl;
     }
-    else if(profit<=200000)
+    else if(score==7||score==8)
     {
-        bonus=100000*0.1+(profit-100000)*0.075;
+        cout<<"你认为电影非常好"<<endl;
     }
-    else if(profit<=400000)
+    else if(score==6||score==5)
     {
-        bonus=100000*0.1+100000*0.075+(profit-200000)*0.05;
-    }
-    else if(profit<=600000)
-    {
-        bonus=100000*0.1+100000*0.075+200000*0.05+(profit-400000)*0.03;
-    }
-    else if(profit<=1000000)
-    {
-        bonus=100000*0.1+100000*0.075+200000*0.05+200000*0.03+(profit-600000)*0.015;
+        cout<<"你认为电影一般"<<endl;
     }
     else
     {
-        bonus=100000*0.1+100000*0.075+200000*0.05+200000*0.03+400000*0.015+(profit-1000000)*0.01;
+        cout<<"你认为电影是烂片"<<endl;
     }
-
-    cout<<"应发奖金："<<bonus<<endl;
     return 0;
 }
